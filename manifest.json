@@ -1,17 +1,19 @@
 {
-    "manifest_version": 2,
-    "name": "Highlight",
-    "version": "1.0",
-    "content_scripts": [
-        {
-          "matches": ["https://www.youtube.com/*"],
-          "js": ["./main.js"]
-        }
-      ],
-    "css" : ["./style.css"],
-    "browser_action": {
-        "default_title":    "Highlight Options",
-        "default_icon":     "./marker.png",
-        "default_popup":    "popup.html"
+  "manifest_version": 2,
+  "name": "Highlight",
+  "version": "1.0",
+  "description": "dynamically style text just by highlighting it with your cursor",
+  "permissions": ["file://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./main.js"]
     }
+  ],
+  "browser_action": {
+      "default_title":    "Highlight Options",
+      "default_icon":     "./marker.png",
+      "default_popup":    "popup.html"
   }
+}
+
